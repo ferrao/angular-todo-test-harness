@@ -18,7 +18,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "browserify app.js --outfile bundle.js",
+    "build": "browserify src/app.js --outfile build/bundle.js; cp src/index.html build; cp src/todo.css build",
+    "prebuild": "rm -rf build; mkdir build",
+    "clean": "rm -rf build",
     "test": "karma start"
   },
   "repository": {
