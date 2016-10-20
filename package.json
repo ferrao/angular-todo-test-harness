@@ -1,0 +1,41 @@
+{
+  "name": "angular-todo-test-harness",
+  "version": "0.0.1",
+  "description": "Simple Angular Todo app for setting up a browserify karma jasmine test harness ",
+  "main": "app.js",
+  "dependencies": {
+    "angular-mocks": "^1.5.8",
+    "angular": "^1.5.8",
+    "brfs": "^1.4.3",
+    "browserify": "^13.1.0",
+    "jasmine-core": "^2.5.2",
+    "karma-browserify": "^5.1.0",
+    "karma": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-jasmine": "^1.0.2",
+    "watchify": "^3.7.0",
+    "karma-chrome-launcher": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferrao/angular-todo-test-harness.git"
+  },
+  "keywords": [
+    "angular",
+    "todo",
+    "browserify",
+    "karma",
+    "jasmine",
+    "test"
+  ],
+  "author": "Rui Ferrao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferrao/angular-todo-test-harness/issues"
+  },
+  "homepage": "https://github.com/ferrao/angular-todo-test-harness#readme"
+}
