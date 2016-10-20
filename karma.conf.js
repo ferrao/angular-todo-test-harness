@@ -14,6 +14,8 @@ module.exports = function(config) {
             'karma-jasmine',
             'karma-browserify',
             'karma-angular',
+            'karma-coverage',
+            'karma-coverage-html-index-reporter',
             'karma-mocha-reporter',
             'karma-phantomjs-launcher',
             'karma-chrome-launcher',
@@ -34,6 +36,7 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         // put a browserify transform on any file that requires or exports
         preprocessors: {
+            'src/**/*.js': ['coverage'],
             'src/todo.js': ['browserify'],
             'src/todo-ctrl.js': ['browserify'],
         },
@@ -42,10 +45,21 @@ module.exports = function(config) {
             debug: true
         },
 
+        coverageReporter: {
+            reporters: [{
+                type: 'text-summary',
+                includeAllSources: true
+            }, {
+                type: 'html',
+                dir: 'build/coverage/',
+                includeAllSources: true
+            }]
+        },
+
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['mocha'],
+        reporters: ['mocha', 'coverage', 'coverage-html-index'],
 
 
         // web server port
