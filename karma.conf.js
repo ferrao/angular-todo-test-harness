@@ -5,7 +5,7 @@ module.exports = function(config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: 'src',
+        basePath: '',
 
 
         // frameworks to use
@@ -20,11 +20,11 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '../node_modules/angular/angular.js',
-            '../node_modules/angular-mocks/angular-mocks.js',
-            'todo.js',
-            'todo-ctrl.js',
-            'test.spec.js'
+            'node_modules/angular/angular.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'src/todo.js',
+            'src/todo-ctrl.js',
+            'test/todo-ctrl.spec.js'
         ],
 
         // list of files to exclude
@@ -35,8 +35,8 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         // put a browserify transform on any file that requires or exports
         preprocessors: {
-            'todo.js': ['browserify'],
-            'todo-ctrl.js': ['browserify'],
+            'src/todo.js': ['browserify'],
+            'src/todo-ctrl.js': ['browserify'],
         },
 
         browserify: {
