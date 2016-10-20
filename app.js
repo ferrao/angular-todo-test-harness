@@ -1,1 +1,2 @@
-require('./module');
+require('angular');
+require('./todo');
