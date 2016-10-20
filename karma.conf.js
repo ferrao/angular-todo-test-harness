@@ -36,7 +36,7 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         // put a browserify transform on any file that requires or exports
         preprocessors: {
-            'src/**/*.js': ['coverage'],
+            'src/**/*.js': ['browserify', 'coverage'],
             'src/todo.js': ['browserify'],
             'src/todo-ctrl.js': ['browserify'],
         },
